@@ -1,0 +1,26 @@
+<button class="btn1" onclick="history.back()">Go Back</button>
+
+<h3 class="to">To-do item</h3>
+<div class="body">
+    <p class=" user my-5 mx-4 ">
+        <span class="id">{{todo_details?.id}}: </span>
+        <span class="ms-3">{{todo_details?.title}}</span>
+        <span class="todo ms-5">{{todo_details?.completed === true ? 'completed' : 'not completed'}}</span>
+
+    </p>
+
+    <div id="view">
+        <button *ngIf="is_show" id="show" (click)="getUser()">To close</button>
+        <button *ngIf="!is_show" id="hide" (click)="hideUser()">View user</button>
+    </div>
+
+    <p *ngIf="is_show" class="todos my-3 mx-3">
+        <span class="id">name: {{user?.name}} </span>
+        <span class="ms-5">email: {{user?.email}}</span>
+        <span class="todo ms-5">city: {{user?.address?.city}}</span>
+    </p>
+
+
+
+
+</div>

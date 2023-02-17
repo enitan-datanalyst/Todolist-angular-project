@@ -1,0 +1,8 @@
+<div *ngIf="routeURL === '/'">
+    <div class="container" style="text-align: center; margin-top: 20%">
+        <h1>Welcome! Adeniji</h1>
+        <button (click)="getTodos()">Go to To-Do List</button>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

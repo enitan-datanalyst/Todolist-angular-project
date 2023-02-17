@@ -1,0 +1,21 @@
+<button class="btn2 ms-5 my-3" onclick="history.back()">Go Back</button>
+<div>
+    <p class="header ms-3 my-5">TO-DO LIST</p>
+
+    <div class="todo mt-5">
+        <div class="btn1" *ngFor="let todo of todos">
+            <p class="todos my-3 mx-3">
+                <span class="id">{{ todo.id }}: </span>
+                <span>{{ todo.title }}</span>
+                <span class="todo ms-5">{{todo.completed === true ? "completed" : "not completed"}}</span>
+            </p>
+
+            <div class="view">
+                <button routerLink="{{ todo.id }}" class="btn3">View details</button>
+                <button class="btn btn-danger" (click)="deleteTodo(todo.id)">Delete</button>
+                <button class="btn btn-success" (click)="markCompleted(todo.id)" *ngIf="todo.completed === false">Mark completed</button>
+
+            </div>
+        </div>
+    </div>
+</div>
