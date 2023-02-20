@@ -36,7 +36,7 @@ export class TodoDetailsComponent implements OnInit {
       .subscribe(async (data) => {
         console.log(data);
         this.todo_details = data;
-        //  await this.viewUser()
+         await this.getUser()
       });
   }
 
